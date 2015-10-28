@@ -25,6 +25,32 @@ namespace ScrambleWordGame
         public MainPage()
         {
             this.InitializeComponent();
+            FindWord();
         }
+
+        void FindWord()
+        {
+            string searchWord = "tars";
+            List<string> foundWords = new List<string>(); // star, rats, arts;
+            string words = System.IO.File.ReadAllText("wordsEn.txt");
+            List<string> wordsList = words.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None).ToList<string>();
+            /*
+            1) Remove words from wordsList where words length > 4
+            2) Search in wordsList which has combination of searchWord (tars)
+                Call function by SearchWord(List<string> wordsListFilteredByLength, string searchWord)
+            */
+            return;
+        }
+
+        List<string> SearchWord(List<string> wordsListFilteredByLength, string searchWord)
+        {
+            List<string> wordsFound = new List<string>();
+            /*
+            1) Split the searchWord into Char array or list
+            2) Search each character in the wordsListFilteredByLenght
+            */
+            return wordsFound;
+        }
+
     }
 }
